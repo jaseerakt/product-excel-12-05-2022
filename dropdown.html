@@ -1,0 +1,162 @@
+{% extends 'base.html'%}
+{% block content %}
+<html>
+<body>
+<form action="/select/" method="post" enctype="multipart/form-data" name="form" id="form" >
+  {% csrf_token %}
+<table align="center" border="3" >
+      <tr>
+          <th>Big_name</th>
+          <th>excel_name</th>
+      </tr>
+    <tr>
+          <td> Company heading</td>
+
+          <td><select name="select" class="form-control"  id="select">
+                         {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                         {% endfor %}
+              </select></td>
+
+    </tr>
+    <tr>
+          <td>First Name</td>
+           <td><select name="select1" class="form-control"  id="select1">
+
+                         {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                         {% endfor %}
+          </select></td>
+    </tr>
+      <tr>
+          <td>Last Name</td>
+           <td><select name="select2" class="form-control"  id="select2">
+                               {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                         {% endfor %}
+          </select></td>
+    </tr>
+      <tr>
+          <td>Phone</td>
+           <td><select name="select3" class="form-control"  id="select3">
+                               {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                         {% endfor %}
+          </select></td>
+    </tr>
+       <tr>
+          <td>Email</td>
+           <td><select name="select4" class="form-control"  id="select4">
+                               {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+    </tr>
+       <tr>
+          <td>Notes</td>
+           <td><select name="select5" class="form-control"  id="select5">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+    </tr>
+
+</table>
+    <h2 align="center"> Address</h2>
+    <table align="center" border="3" >
+        <tr>
+          <td>Address1</td>
+           <td><select name="select6" class="form-control"  id="select6">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+    </tr>
+        <tr>
+          <td>Address2</td>
+           <td><select name="select7" class="form-control"  id="select7">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+    </tr>
+        <tr>
+          <td>Type</td>
+           <td><select name="select8" class="form-control"  id="select8">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+    </tr>
+        <tr>
+          <td>City</td>
+           <td><select name="select9" class="form-control"  id="select9">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+        </tr>
+        <tr>
+          <td>Company</td>
+           <td><select name="select10" class="form-control"  id="select10">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+        </tr>
+        <tr>
+          <td>Country Code</td>
+           <td><select name="select11" class="form-control"  id="select11">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+        </tr>
+        <tr>
+          <td>First Name</td>
+           <td><select name="select12" class="form-control"  id="select12">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+        </tr>
+        <tr>
+          <td>Last Name</td>
+           <td><select name="select13" class="form-control"  id="select13">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+        </tr>
+        <tr>
+          <td>Phone</td>
+           <td><select name="select14" class="form-control"  id="select14">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+        </tr>
+        <tr>
+          <td>Postal Code</td>
+           <td><select name="select15" class="form-control"  id="select15">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+        </tr>
+        <tr>
+          <td>State or Provice</td>
+           <td><select name="select16" class="form-control"  id="select16">
+                             {% for column in allcolumns %}
+                              <option>{{column}}</option>
+                               {% endfor %}
+          </select></td>
+        </tr>
+        <tr>
+            <td><input type="submit" class="btn btn-info" id="button1" name="button1" value="submit" ></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+{% endblock %}
